@@ -1,5 +1,5 @@
 resource "ibm_compute_vm_instance" "vm1" {
-depends_on = ["null_resource.test"]
+//depends_on = ["null_resource.test"]
 hostname = "vm1"
 domain = "example.com"
 os_reference_code = "DEBIAN_8_64"
@@ -13,8 +13,8 @@ disks = [25]
 local_disk = false
 }
 
-resource "null_resource" "test" {
+/*resource "null_resource" "test" {
   provisioner "local-exec" {
     command = "printenv"
   }
-}
+}*/
